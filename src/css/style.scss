@@ -1,0 +1,29 @@
+.container {
+    margin-top: 200px;
+    margin-left: 200px;
+    width: 200px;
+    height: 100px;
+
+    &__button {
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgb(187, 9, 9);
+        border-radius: 20px;
+        background-color: rgb(163, 29, 29);
+        color: white;
+        font-size: 20px;
+        
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            width: 105%;
+            height: 105%;
+        }
+    }
+}
+
+.active {
+    border: 5px solid rgb(255, 0, 0);
+}
