@@ -19,7 +19,7 @@ describe('Card checker', () => {
       });
     });
     browser = await puppetter.launch({
-      // headless: true,
+      // headless: false,
       // slowMo: 200,
       // devtools: true,
     });
@@ -34,11 +34,15 @@ describe('Card checker', () => {
       await page.goto(baseUrl);
       const app = new AppCreator();
       app.init();
-      const input = await page.$('input');
-      const button = await page.$('button');
-      await input.type('5321300341660715');
+      const input = await page.$('.container__input');
+      const button = await page.$('.container__button');
+      const popup = await page.$('.container__popup');
+      expect(input).not.toBe(null);
+      expect(button).not.toBe(null);
+      expect(popup).not.toBe(null);
       await button.click();
-      await page.waitForSelector('.active');
+      const hidden = await page.$('container__popup hidden');
+      expect(hidden).toBe(null);
     });
   });
 });
