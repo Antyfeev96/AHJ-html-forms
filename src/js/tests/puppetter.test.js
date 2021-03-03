@@ -30,7 +30,7 @@ describe('Card checker', () => {
     server.kill();
   });
   describe('test', () => {
-    test('card checker', async () => {
+    test('app checker', async () => {
       await page.goto(baseUrl);
       const app = new AppCreator();
       app.init();
