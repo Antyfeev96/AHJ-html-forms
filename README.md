@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/sabb455rwefslek6?svg=true)](https://ci.appveyor.com/project/Antyfeev96/ahj-html-forms)
