@@ -3,7 +3,7 @@ import { fork } from 'child_process';
 import AppCreator from '../appCreator';
 
 jest.setTimeout(30000);
-describe('Card checker', () => {
+describe('app checker', () => {
   let browser = null;
   let page = null;
   let server = null;
@@ -30,7 +30,7 @@ describe('Card checker', () => {
     server.kill();
   });
   describe('test', () => {
-    test('app checker', async () => {
+    test('components should be rendered', async () => {
       await page.goto(baseUrl);
       const app = new AppCreator();
       app.init();
