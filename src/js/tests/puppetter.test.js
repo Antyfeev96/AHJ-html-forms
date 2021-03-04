@@ -34,10 +34,8 @@ describe('app checker', () => {
       await page.goto(baseUrl);
       const app = new AppCreator();
       app.init();
-      const input = await page.$('.container__input');
       const button = await page.$('.container__button');
       const popup = await page.$('.container__popup');
-      expect(input).not.toBe(null);
       expect(button).not.toBe(null);
       expect(popup).not.toBe(null);
       await button.click();
