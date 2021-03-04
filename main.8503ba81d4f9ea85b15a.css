@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box; }
+
+.container {
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: auto;
+  position: relative; }
+  .container__popup {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 2px solid grey; }
+    .container__popup.hidden {
+      display: none; }
+  .container__arrow {
+    position: absolute;
+    display: block;
+    left: 45%;
+    top: 109%; }
+    .container__arrow::before {
+      content: "";
+      position: absolute;
+      display: block;
+      border-color: transparent;
+      border-style: solid;
+      bottom: 0;
+      border-width: .5rem .5rem 0;
+      border-top-color: grey; }
+    .container__arrow::after {
+      content: "";
+      bottom: 1px;
+      border-width: .5rem .5rem 0;
+      border-top-color: #fff;
+      position: absolute;
+      display: block;
+      border-color: transparent transparent transparent transparent;
+      border-style: solid; }
+  .container__popuptitle {
+    background-color: #ebe8e8;
+    height: 25px;
+    text-align: center; }
+  .container__popuptext {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .container__button {
+    width: 200px;
+    height: 100px;
+    border: 2px solid #bb0909;
+    border-radius: 20px;
+    background-color: #a31d1d;
+    color: white;
+    font-size: 20px; }
+    .container__button:focus {
+      outline: none; }
+    .container__button:hover {
+      width: 205px;
+      height: 105px; }
+
+.active {
+  border: 5px solid red; }
+
